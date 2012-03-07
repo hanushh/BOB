@@ -1,0 +1,305 @@
+
+______________
+Sat January 14 2012 12:13:08 AM
+_______________
+Error: row 1-Invalid username
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+
+______________
+Sat January 14 2012 12:13:24 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-The user cpearson@mum.edu already exist
+Error: row 3-The user tbrooks@mum.edu already exist
+
+______________
+Sat January 14 2012 03:20:57 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-The user cpearson@mum.edu already exist
+Error: row 3-The user tbrooks@mum.edu already exist
+
+______________
+Sat January 14 2012 03:12:41 PM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+
+______________
+Sat January 14 2012 03:25:20 PM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+
+______________
+Sat January 14 2012 03:42:23 PM
+_______________
+Error: row 1-The user cpearson@mum.edu already exist
+Error: row 2-The user tbrooks@mum.edu already exist
+
+______________
+Sat January 14 2012 08:37:09 PM
+_______________
+Error: row 1-Invalid username
+Error: row 2-Required field missing
+Sucess: row 3-Sucessfully updated
+Error: row 4-Required field missing
+Sucess: row 5-Sucessfully updated
+Error: row 6-Required field missing
+Sucess: row 7-Sucessfully updated
+Error: row 8-Required field missing
+Sucess: row 9-Sucessfully updated
+
+______________
+Sat January 14 2012 08:43:23 PM
+_______________
+Error: row 1-Required field missing
+Error: row 2-The user dlynch@dltv.com already exist
+Error: row 3-Required field missing
+Error: row 4-The user rsimmons@mum.edu already exist
+Error: row 5-Required field missing
+Error: row 6-The user kperry@mum.edu already exist
+Error: row 7-Required field missing
+Error: row 8-The user pmccartney@mum.edu already exist
+
+______________
+Sat January 14 2012 08:46:07 PM
+_______________
+Error: row 1-Required field missing
+Error: row 2-The user dlynch@dltv.com already exist
+Error: row 3-Required field missing
+Error: row 4-The user rsimmons@mum.edu already exist
+Error: row 5-Required field missing
+Error: row 6-The user kperry@mum.edu already exist
+Error: row 7-Required field missing
+Error: row 8-The user pmccartney@mum.edu already exist
+
+______________
+Sat January 14 2012 08:58:11 PM
+_______________
+Error: row 1-Invalid username
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+
+______________
+Mon January 16 2012 10:44:45 AM
+_______________
+Error: row 1-The user cpearson@mum.edu already exist
+Error: row 2-The user tbrooks@mum.edu already exist
+
+______________
+Mon January 16 2012 10:45:51 AM
+_______________
+Error: row 1-Invalid barcode
+Error: row 2-Invalid barcode
+
+______________
+Mon January 16 2012 10:47:49 AM
+_______________
+
+______________
+Mon January 16 2012 10:48:21 AM
+_______________
+
+______________
+Mon January 16 2012 10:48:35 AM
+_______________
+
+______________
+Mon January 16 2012 11:56:02 AM
+_______________
+
+______________
+Mon January 16 2012 11:57:28 AM
+_______________
+Error: row 1-The user cpearson@mum.edu already exist
+Error: row 2-The user tbrooks@mum.edu already exist
+
+______________
+Mon January 16 2012 10:17:16 PM
+_______________
+Error: row 1-Required field missing
+Sucess: row 2-Sucessfully updated
+Error: row 3-Required field missing
+Sucess: row 4-Sucessfully updated
+Error: row 5-Required field missing
+Sucess: row 6-Sucessfully updated
+Error: row 7-Required field missing
+Sucess: row 8-Sucessfully updated
+
+______________
+Tue January 17 2012 05:19:32 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Error: row 2-The user dlynch@dltv.com already exist
+Sucess: row 3-Sucessfully updated
+Error: row 4-The user rsimmons@mum.edu already exist
+Sucess: row 5-Sucessfully updated
+Error: row 6-The user kperry@mum.edu already exist
+Sucess: row 7-Sucessfully updated
+Error: row 8-The user pmccartney@mum.edu already exist
+
+______________
+Tue January 17 2012 06:57:47 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Sucess: row 8-Sucessfully updated
+
+______________
+Tue January 17 2012 07:02:37 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Sucess: row 8-Sucessfully updated
+
+______________
+Tue January 17 2012 07:22:53 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+
+______________
+Tue January 17 2012 07:24:03 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Sucess: row 8-Sucessfully updated
+
+______________
+Tue January 17 2012 07:38:11 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Sucess: row 8-Sucessfully updated
+
+______________
+Tue January 17 2012 07:40:05 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Sucess: row 8-Sucessfully updated
+
+______________
+Tue January 17 2012 07:40:19 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+
+______________
+Tue January 17 2012 07:44:38 AM
+_______________
+Error: row 1-The user owinfrey@mum.edu already exist
+Error: row 2-The user dlynch@dltv.com already exist
+Error: row 3-The user ceastwood@mum.edu already exist
+Error: row 4-The user rsimmons@mum.edu already exist
+Error: row 5-The user rbrand@mum.edu already exist
+Error: row 6-The user kperry@mum.edu already exist
+Error: row 7-The user rstarr@mum.edu already exist
+Error: row 8-The user pmccartney@mum.edu already exist
+
+______________
+Tue January 17 2012 07:45:26 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Sucess: row 8-Sucessfully updated
+
+______________
+Tue January 17 2012 07:45:44 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+
+______________
+Tue January 17 2012 08:55:50 PM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Sucess: row 8-Sucessfully updated
+
+______________
+Tue January 17 2012 08:56:20 PM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+
+______________
+Wed January 18 2012 01:39:53 PM
+_______________
+Error: row 1-Invalid barcode
+Error: row 2-Invalid barcode
+Error: row 3-Invalid barcode
+Error: row 4-Invalid barcode
+Error: row 5-Invalid barcode
+Error: row 6-Invalid barcode
+Error: row 7-Invalid barcode
+Error: row 8-Invalid barcode
+
+______________
+Wed January 18 2012 01:40:52 PM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Sucess: row 8-Sucessfully updated
+
+______________
+Wed January 18 2012 03:56:13 PM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+
+______________
+Wed January 18 2012 03:57:39 PM
+_______________
+Error: row 1-The user cpearson@mum.edu already exist
+Error: row 2-The user tbrooks@mum.edu already exist
+
+______________
+Wed January 18 2012 04:22:29 PM
+_______________
+
+______________
+Wed January 18 2012 04:22:32 PM
+_______________
