@@ -2,6 +2,11 @@
 <html><head><?php error_reporting(E_ALL ^ E_NOTICE);
 require_once("logcheck.php");
 require_once ('config.php'); 
+
+require_once('User/user.class.php');
+
+$obj_user 		=	new User();
+$serialNumber = $obj_user->getSerialNumber($barcode);
 ?>
 
 
@@ -42,7 +47,7 @@ formatted page see <a href="http://myattendance.us/">http://myattendance.us/</a>
     <th>Result</th>
   </tr>
 <?php $barcode=$_SESSION['barcode'];
-$sql="SELECT * FROM attendanceTime WHERE `barcode`='$barcode'";
+$sql="SELECT * FROM attendanceTime WHERE `serialNumber`='$serialNumber'";
 $res=mysql_query($sql);
 	$i=0;
 	while($row = mysql_fetch_array($res)):

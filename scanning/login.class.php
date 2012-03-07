@@ -96,7 +96,7 @@ class Login {
 						$q = "UPDATE `attendanceTime` SET inPM='$INpm',i=$i,j=$j WHERE `serialNumber`='$serialNumber' AND `date`='$date'";
 
 					} else {
-						$q = "INSERT INTO `attendanceTime`(serialNumber date, inAM, inPM,i,j ) VALUES ('$serialNumber','$date', '$INam', '$INpm',$i,$j)";
+						$q = "INSERT INTO `attendanceTime`(serialNumber, date, inAM, inPM,i,j ) VALUES ('$serialNumber','$date', '$INam', '$INpm',$i,$j)";
 					}
 
 				}
