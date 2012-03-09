@@ -26,6 +26,7 @@ $obj_user 		=	new User();
   
   <link href="style1.css" rel="stylesheet" type="text/css" media="screen" />
   <script type="text/javascript">
+  /*
 function confirm_delete(user,status)
 {
 if(status) stat='deactivate';
@@ -58,6 +59,7 @@ if (r==true)
   }
 
 }
+*/
 </script>
   
   </head><body>
@@ -189,7 +191,7 @@ $total_pages 		=		ceil($totalrecords/ $end_limit);
 
 
 
-echo "<big>you are viewing <span style='color:#ff0000'> $title</span></big><br />There are a total of $totalrecords names in this category. This is page $page of $total_pages total page(s) <br /><small>Note: Either MUM Status or IAG Status may shown as<a href=dna.php> DNA </a>, which stands for Does Not Apply</small>
+echo "<big>you are viewing <span style='color:#ff0000'> $title</span></big><br />There are a total of $totalrecords names in this category. This is page $page of $total_pages total page(s) <br /><small>Note: Either MUM Status or IAG Status may show as <a href=dna.php>DNA</a> , which stands for Does Not Apply</small>
 <br /><br />
 <a href='logout.php'>Logout</a> or return to the Administrator's <a href='admin.php'>home page</a>
 
@@ -309,10 +311,10 @@ echo "<table style=text-align:center border='0'><br /><br />
 <th>User name</th>
 <!--<th>Password (encrypted)</th>-->
 <th>Barcode</th>
-<!--<th>Start date</th>-->
+<!--<th>Start date</th>
 <th>Gender</th>
 <th>E-Mail</th>
-<th>Role</th>
+<th>Role</th>-->
 <th>MUM Community</th>
 <th>MUM Status</th>
 <th>IAG Community</th>
@@ -355,35 +357,35 @@ $iagCom="No";
 $stat_iag="DNA";
 }
 
-$act_deact_link="<a onClick='confirm_delete({$row['serialNumber']},{$row[$com_stat]})' href='javascript:void(0);'>$status</a>";
+//$act_deact_link="<a onClick='confirm_delete({$row['serialNumber']},{$row[$com_stat]})' href='javascript:void(0);'>$status</a>";
 
-if($row['mum_stat'] ==0 AND $row['iag_stat']!=0) echo "<tr class='fade'>";
+if(!$row['mumCommunity']) echo "<tr class='fade'>";
 else echo "<tr>";
 $c=$l;
 echo "<td><b>".strtoupper(substr($row['lastName'],0,1))."</b>".substr($row['lastName'],1)."</td>";
 echo "<td> " . $row['firstName'] . " </td>";
 echo "<td> " . $row['userName'] . " </td>";
 echo "<td> " . $row['barcode'] . " </td>";
-echo "<td> " . $row['gender'] . " </td>";
-echo "<td> " . $row['subscribe'] . " </td>";
-echo "<td> " . $role . " </td>";
+//echo "<td> " . $row['gender'] . " </td>";
+//echo "<td> " . $row['subscribe'] . " </td>";
+//echo "<td> " . $role . " </td>";
 echo "<td> " . $mumCom ." </td>";
 echo "<td> " . $stat_mum. " </td>";
 echo "<td> " . $iagCom ." </td>";
 echo "<td> " . $stat_iag. " </td>";
 //$commid=$obj_user->getCommunityid($_SESSION['serialNumber']);
-if($row['mum_stat']==1 OR $row["iag_stat"]!=1){
-$edit_profile_link="<a href='editprofile.php?serial=$row[serialNumber]'>Edit Profile</a>";
-$browse_edit_link="<a href='edit_atte_srch.php?user=$row[barcode]'>Browse or Edit Attendance</a>";
+if($row['mumCommunity']){
+$edit_profile_link="<a href='editprofile.php?serial=$row[serialNumber]'>Profile</a>";
+$browse_edit_link="<a href='edit_atte_srch.php?user=$row[barcode]'>Attendance</a>";
 }
 else{
-$edit_profile_link="Edit Profile";
-$browse_edit_link="Browse or Edit Attendance";
-$act_deact_link=$status;
+$edit_profile_link="Profile";
+$browse_edit_link="Attendance";
+//$act_deact_link=$status;
 }
-echo "<td style='border: 1px dotted; padding: 10px;'>$edit_profile_link</td>";
-echo "<td style='border: 1px dotted; padding: 10px;'>$browse_edit_link</td>";
-echo "<td style='border: 1px dotted; padding: 10px;'>$act_deact_link</td>";
+echo "<td style='border: 1px dotted; background: #ffffff; padding: 10px;'>$edit_profile_link</td>";
+echo "<td style='border: 1px dotted; background: #ffffff; padding: 10px;'>$browse_edit_link</td>";
+//echo "<td style='border: 1px dotted; padding: 10px;'>$act_deact_link</td>";
 echo "</tr>";
 }
 echo "</div>";

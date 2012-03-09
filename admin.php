@@ -43,14 +43,13 @@ a time)<br /><br />
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">4. <a href="browseoredit.php">Browse</a> or <a href="browseoredit.php">Edit</a>
-list of users and administrators in the attendance database<br /><br />
+      <td style="vertical-align: top;">4. <a href="browseoredit.php">Browse</a> list of users in the attendance database. From here you may edit a user's profile and/or the user's attendance record<br /><br />
       </td>
     </tr>
     
 	 <tr>
       <td style="vertical-align: top;">5. <a href="reviewedits.php">Review</a>
-edited records - all edited records listed by date with comments<br /><br />
+edited records - all edited records listed by date with comments; also searchable by last name and name of editor<br /><br />
       </td>
     </tr>
 	 <tr>
@@ -66,7 +65,7 @@ essential for good security<br /><br />
       </td>
     </tr>
 	
-	 <tr>
+	 <!--<tr>
       <td style="vertical-align: top;">8. <a href="lostbarcode.php">Invalidate</a>
 barcode on lost badge, issue new barcode, and merge records<br /><br />
       </td>
@@ -85,7 +84,7 @@ report an error, request changes, or for other issues<br /><br />
       </td> -->
     </tr>
 	 <tr>
-      <td style="vertical-align: top;">10. <a href="reports.php">Reports</a> - several commonly used reports are available by simply clicking the appropriate links on the reports page<br /><br /><br /><br />
+      <td style="vertical-align: top;">8. <a href="reports.php">Reports</a> - several commonly used reports are available by simply clicking the appropriate links on the reports page<br /><br /><br /><br />
       </td>
     </tr>
     <tr>

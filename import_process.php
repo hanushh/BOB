@@ -39,7 +39,7 @@ fwrite($file, $time);
 fwrite($file,"\n_______________\n");
 
 	if(isset($_FILES))
-	{      
+	{  // print_r($_FILES);   
 		$f= $_FILES["csvfile"]["type"];
 
 		if ( 	( 	($_FILES["csvfile"]["type"] == "text/csv") 						|| 
@@ -82,6 +82,7 @@ fwrite($file,"\n_______________\n");
 
 						$barcode	=	dbconnect::escape($contents[0]);
 						$pass1		=	md5(dbconnect::escape($contents[1]));
+						$pass1		=	($pass1 == NULL || $pass1 == '' )?'123':$pass1;
 						$email		=	dbconnect::escape($contents[2]);
 						require_once('evalbarcode.php');
 						/////////test///////////
@@ -106,9 +107,65 @@ fwrite($file,"\n_______________\n");
 								if(!$contents["$j"])
 								{
 									$error_missing=true;
-									//echo "<p style='color: red; text-align: center;'> missing field column: $j</p>";
 								}
-						}	
+						}
+						if($contents[8] && $contents[0]){
+							$error_missing=false;
+							if(!evalbarcode($barcode)){
+								$message="Error: row $r-Invalid barcode\n";
+								fwrite($file, $message);
+							}else{
+								
+								$q = "INSERT INTO `user`(
+								barcode, 
+								password, 
+								userName, 
+								firstName,  
+								lastName, 
+								gender, 
+								subscribe, 
+								role
+								) 
+								VALUES (
+								'".dbconnect::escape($contents[0])."', 
+								'".$pass1."',
+								'".dbconnect::escape($contents[2])."',
+								'".dbconnect::escape($contents[3])."',
+								'".dbconnect::escape($contents[4])."',
+								'".dbconnect::escape($contents[5])."',
+								'".dbconnect::escape($contents[6])."',
+								'".dbconnect::escape($contents[7])."')";
+								
+								if(mysql_query($q))
+								{
+									$serial_number = mysql_insert_id();
+							
+									if(($serial_number > 0))
+									{
+									
+										$q2  =	"INSERT INTO `userCommunity` (serialNumber,mum_stat,mumCommunity) 
+						VALUES ('".$serial_number."','1','1')";
+										if(!mysql_query($q2))
+										{
+											$message = mysql_error();
+										}
+										else
+										{
+											$i++;
+											$message="Sucess: row $r-Sucessfully updated\n";
+										}
+									}
+								}
+								else{
+									$message = mysql_error();
+								}
+							fwrite($file,$message);	
+						}
+							
+							continue;
+						
+						}
+						
 						$rs_duplicates = mysql_query("select barcode from user where userName='".$email."'");
 						$duplicates = mysql_num_rows($rs_duplicates);
 						$rs_duplicates1 = mysql_query("select userName from user where barcode='".$barcode."'");
@@ -162,7 +219,7 @@ fwrite($file,"\n_______________\n");
 								gender, 
 								subscribe, 
 								role, 
-								comments ) 
+								) 
 								VALUES (
 								'".dbconnect::escape($contents[0])."', 
 								'".$pass1."',
@@ -171,8 +228,7 @@ fwrite($file,"\n_______________\n");
 								'".dbconnect::escape($contents[4])."',
 								'".dbconnect::escape($contents[5])."',
 								'".dbconnect::escape($contents[6])."',
-								'".dbconnect::escape($contents[7])."',
-								'".dbconnect::escape($contents[8])."')";
+								'".dbconnect::escape($contents[7])."')";
 								
 								if(mysql_query($q))
 								{
@@ -211,7 +267,6 @@ fwrite($file,"\n_______________\n");
 		else
 		{
 			echo "<big>File format $f is not supported. </big><big>Please upload Files in csv format</big>";
-		
 		}
 
 	}
