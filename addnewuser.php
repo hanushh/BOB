@@ -106,10 +106,8 @@ name</big></big> <input name="last_name" id="last_name" type="text" /></td>
         <td style="vertical-align: top; text-align: center;"><big><big><font color="red">* </font>User
 name </big></big><input name="uname" id="uname" type="text" /></td>
         <td style="vertical-align: top;"><big><span style="font-weight: bold;">User name</span>
-should ALWAYS be a valid,
-working e-mail address. Exception: if a person
-does not use e-mail, an alternative user name
-may be entered</big> </td>
+should ALWAYS be a valid, working e-mail address. Exception: if a person
+does not use e-mail, an alternative user name should be entered using the pseudo-domain "no-email.com" For instance: testaccount@no-email.com This is essential in order to validate a user when he or she logs in to mum.myattendance.us</big> </td>
       </tr>
       <tr>
         <td style="vertical-align: top; text-align: center;"><big><big><font color="red">* </font>Password
