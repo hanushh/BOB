@@ -1,10 +1,7 @@
 <?php
-function getSerialNumber($barcode) {
-	$q = "SELECT serialNumber FROM `user` WHERE barcode='{$barcode}'";
-	$res = mysql_query($q) or die(mysql_error());
-	$arr = mysql_fetch_array($res);
-	return $arr['serialNumber'];
-}
+require_once ('../evalbarcode.php');
+error_reporting(E_ALL ^ E_NOTICE);
+require_once ('../config.php');
 ?>
 <html>
 	<head>
@@ -16,21 +13,18 @@ function getSerialNumber($barcode) {
 		</script>
 	</head>
 	<?php
-	error_reporting(E_ALL ^ E_NOTICE);
-	require_once ('config.php');
-	function getcommunityID($community_name) {
-
-		$q = "SELECT commId FROM `community` WHERE community='{$community_name}'";
-
-		$res = mysql_query($q) or die(mysql_error());
-		if (mysql_num_rows($res) > 0) {
-			$row = mysql_fetch_array($res);
-			return $row['commId'];
-		} else {
-			return FALSE;
-		}
+	function getSCID($SCDesc) {
+		$q2 = "SELECT SCID FROM `scanningComputer` WHERE SCDesc='{$SCDesc}'";
+		$res = mysql_query($q2) or die(mysql_error());
+		$arr = mysql_fetch_array($res);
+		return $arr['SCID'];
 	}
-
+function getSerialNumber($barcode) {
+		$q2 = "SELECT serialNumber FROM `user` WHERE barcode='{$barcode}'";
+		$res = mysql_query($q2) or die(mysql_error());
+		$arr = mysql_fetch_array($res);
+		return $arr['serialNumber'];
+	}
 	$message = "";
 	$i = 0;
 	$tot_rows = 0;
@@ -42,7 +36,8 @@ function getSerialNumber($barcode) {
 	fwrite($file, $time);
 	fwrite($file, "\n_______________\n");
 
-	if (isset($_FILES)) {// print_r($_FILES);
+	if (isset($_FILES)) {
+		//print_r($_FILES);DIE();
 		$f = $_FILES["csvfile"]["type"];
 
 		if ((($_FILES["csvfile"]["type"] == "text/csv") || ($_FILES["csvfile"]["type"] == "text/comma-separated-values") || ($_FILES["csvfile"]["type"] == "application/csv") || ($_FILES["csvfile"]["type"] == "application/excel") || ($_FILES["csvfile"]["type"] == "application/vnd.ms-excel") || ($_FILES["csvfile"]["type"] == "application/vnd.msexcel") || ($_FILES["csvfile"]["type"] == "application/vnd.msexcel")) && ($_FILES["csvfile"]["size"] < 50000)) {
@@ -62,66 +57,44 @@ function getSerialNumber($barcode) {
 
 				$r = 0;
 				while (!feof($file_handle)) {
-					$r++;
 					$contents = fgetcsv($file_handle, 1024);
-
+					if($r==0){
+						$r=$r+1;
+						continue;
+					}
+					
+					$r++;
+					
 					if (count(array_values($contents)) > 0) {
-
+						
 						$barcode = dbconnect::escape($contents[0]);
 						$serialno = getSerialNumber($barcode);
-						
-						require_once ('evalbarcode.php');
-					
-						///////////////end///////////
+						$SCID	= getSCID(dbconnect::escape($contents[4]));
+						echo("<br />SCID:".$SCID);
+						$q = "INSERT INTO `attendanceTime`(
+										serialNumber, 
+										date, 
+										inAM, 
+										inPM,
+										SCID
+									) 
+									VALUES 
+									(
+										'" . $serialno . "', 
+										'" . dbconnect::escape($contents[1]) . "',
+										'" . dbconnect::escape($contents[2]) . "',
+										'" . dbconnect::escape($contents[3]) . "',
+										'" . $SCID . "'
+									)";
 
-						$error_missing = false;
-						for ($j = 0; $j < 5; $j++) {
+						if (mysql_query($q)) {
+							$i++;
+							$timeId = mysql_insert_id();
 
-							if (!$contents["$j"]) {
-								$error_missing = true;
-							}
+						} else {
+							$message = mysql_error();
 						}
-						if ($contents[0]) {
-							$error_missing = false;
-							if (!evalbarcode($barcode)) {
-								$message = "Error: row $r-Invalid barcode\n";
-								fwrite($file, $message);
-							} else {
-								
-								$q = "INSERT INTO `attendanceTime`(
-								serialNumber, 
-								date, 
-								inAM, 
-								inPM,  
-								SCID
-								) 
-								VALUES (
-								'" . $serialno . "', 
-								'" . dbconnect::escape($contents[1]) . "',
-								'" . dbconnect::escape($contents[2]) . "',
-								'" . dbconnect::escape($contents[3]) . "',
-								'" . dbconnect::escape($contents[4]) . "',
-								'" . dbconnect::escape($contents[5]) . "'
-								)";	
-
-								if (mysql_query($q)) {
-									$timeId = mysql_insert_id();
-										if (!mysql_query($q2)) {
-											$message = mysql_error();
-										} else {
-											$i++;
-											$message = "Sucess: row $r-Sucessfully updated\n";
-										}
-									
-								} else {
-									$message = mysql_error();
-								}
-								fwrite($file, $message);
-							}
-
-							continue;
-
-						}
+						fwrite($file, $message);
 
 					}
 					$tot_rows++;
@@ -130,16 +103,16 @@ function getSerialNumber($barcode) {
 			}
 
 		} else {
-			echo "<big>File format $f is not supported. </big><big>Please upload Files in csv format</big>";
+			echo "<big>File format $f is not supported. </big><big>Please upload Files in .csv format</big>";
 		}
 
 	}
-	$tot_rows--;
+	
 	echo "<p style='text-align: center;'>$i of $tot_rows rows inserted.</p>";
-	fwrite($file, $source);
+	fwrite($file, $source."$i of $tot_rows rows inserted.");
 	fclose($file);
 
-	echo "<p style='text-align: center;'>check <a href='javascript:void(0);' onclick='open_win();'>Upload Results</a> for more details</p>";
+	echo "<p style='text-align: center;'>Check <a href='javascript:void(0);' onclick='open_win();'>Upload Results</a> for more details</p>";
 ?>
 	<br />
 	<br />
