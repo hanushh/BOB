@@ -238,7 +238,7 @@ fwrite($file,"\n_______________\n");
 									{
 									
 										$q2  =	"INSERT INTO `userCommunity` (serialNumber,mum_stat,mumCommunity) 
-						VALUES ('".$serial_number."','1','1')";
+										VALUES ('".$serial_number."','1','1')";
 										if(!mysql_query($q2))
 										{
 											$message = mysql_error();
@@ -261,7 +261,6 @@ fwrite($file,"\n_______________\n");
 				}
 	
 			}
-
 
 		}
 		else
