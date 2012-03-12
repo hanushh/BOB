@@ -12,7 +12,7 @@ $out_array = array();
 		$user		=	trim($_POST['user']);
 		if(!$_POST['user'])
 		{
-			$message	=	"Please scan your barcode";
+			$message	=	"InValid";
 			$out_array['scanData'] = $message ;
 			$out_array['DbData'] = "<li style='color:".getErrorColor()."'>Please enter a barcode</li>" ;
 		}
@@ -24,7 +24,7 @@ $out_array = array();
 				$out_array	=	$message;
 			}
 			else{
-				$message="Invalid username or barcode";
+				$message="InValid";
 				$out_array['scanData'] = $message ;
 				$out_array['DbData'] = "<li style='color:".getErrorColor()."'>Not a Group Program Barcode: Not Valid</li>" ;
 			}

@@ -16,7 +16,7 @@ class Login {
 		
 		if($this->is_lost_barcode($this->barcode))
 		{
-			$this -> message['scanData'] 	= "Lost Barcode: Not Valid.";
+			$this -> message['scanData'] 	= "InValid.";
 			$this -> message['DbData'] 		= "<li style='color:".$this->getErrorColor()."'>Lost Barcode: Not Valid.</li>";
 			return $this -> message;
 		}
@@ -120,12 +120,12 @@ class Login {
 				}
 											
 			elseif($row1['mum_stat'] == 0) :
-				$this -> message['scanData'] = "Deactivated Barcode - Not Valid.";
+				$this -> message['scanData'] = "InValid";
 				$this -> message['DbData'] = "<li style='color:".$this->getErrorColor()."'>Deactivated Barcode - Not Valid.</li>";
 			endif;
 			
 		} else {
-			$this -> message['scanData'] = "Not a Group Program Barcode: Not Valid";
+			$this -> message['scanData'] = "InValid";
 			$this -> message['DbData'] = "<li style='color:".$this->getErrorColor()."'>Not a Group Program Barcode: Not Valid</li>";
 		}
 		return $this -> message;

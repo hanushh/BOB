@@ -59,13 +59,6 @@ $log = new Login();
 		</script>
 		<script type="text/javascript" src="../js/jquery.js"></script>
 		<script type="text/javascript">
-		
-		
-			function error_sound(soundObj) {
-				var sound = document.getElementById(soundObj);
-				sound.Play();
-			}
-
 			function scanUser() 
 			{
 				
@@ -83,15 +76,26 @@ $log = new Login();
 						//$("#message p").html(jsonObj.scanData);
 						$("#message p").html("");
 						
-						if(data != "Please scan your barcode" && data != "Invalid username or barcode" && data != "Invalid Barcode") {
+						if(data != "Please scan your barcode" && data != "Invalid username or barcode" && data != "Invalid Barcode") 
+						{
+							if($.trim(jsonObj.scanData)=="InValid"){
+								PlaySound("error_alert.mp3");
+							}
+							else
+							{
+								
+								PlaySound('pleasent.mp3');
+							}
 							getScanned(jsonObj.DbData);
 						}
 						else
 						{
+							PlaySound("error_alert.mp3");
 							$("#message p").html(data);
 						}
 					},
 					error 	: function(xhr, textStatus, errorThrown) {
+						PlaySound("error_alert.mp3");
 						if(textStatus !== null) {
 							alert("Network Error: " + textStatus);
 							$("#message p").html("");
@@ -239,13 +243,34 @@ $log = new Login();
 						<br />
 						<br />
 						Copyright (c) 2011 wakarusa river, A Fairfield, IA Company. All
-						rights reserved.
+						rights reserved.<a href="javascript:PlayPleasentSound()">ply</a>
 						<br />
 					</p>
 				</div>
 				<!-- end #footer -->
 			</div>
-			<embed src="success.wav" autostart="false" width="0" height="0" id="error_sound"
-			enablejavascript="true" />
+				<script type="text/javascript">
+				var sound2Embed;
+		          function PlaySound(file) 
+		          {
+                   	if ( !sound2Embed )
+                    {
+                      	sound2Embed = document.createElement("embed");
+						sound2Embed.setAttribute("src", "../sounds/"+file);
+						sound2Embed.setAttribute("hidden", true);
+						sound2Embed.setAttribute("autostart", true);
+					} else sound2Stop();
+                     	sound2Embed.removed = false;
+						document.body.appendChild(sound2Embed);
+                  }
+                  function sound2Stop() 
+                  {
+                  		if ( sound2Embed && !sound2Embed.removed ) 
+                  		{
+                         	document.body.removeChild(sound2Embed);
+                         	sound2Embed.removed = true;
+                       	}
+                  }
+			</script>
 	</body>
 </html>
