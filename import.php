@@ -45,6 +45,21 @@ require_once('config.php');
     </tr>
 					</table>
 					</form>
+							<form action="attendence_import_process.php" method="POST" enctype="multipart/form-data">
+					<table border="0" width="54%" class="formLabel">
+
+				<TR ID="csvContainer"><TD class='addFieldTitle'>Upload User Profiles:
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+					<TD>
+						<input type='file' class='txtbox' name='csvfile'>
+					</TD>
+					</TR>
+						<TR><TD align="right" colspan="2">
+
+						<input type="submit" value="Upload" name="submit" ><br /><br /><br /><br /></TD></TR></table>
+						</form>
 				<!-- </div>
 			</TD>
 			</TR>
