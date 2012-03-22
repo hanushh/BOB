@@ -19,12 +19,30 @@ require_once ('config.php');
 		$arr = mysql_fetch_array($res);
 		return $arr['SCID'];
 	}
-function getSerialNumber($barcode) {
+	function getSerialNumber($barcode) 
+	{
 		$q2 = "SELECT serialNumber FROM `user` WHERE barcode='{$barcode}'";
 		$res = mysql_query($q2) or die(mysql_error());
 		$arr = mysql_fetch_array($res);
 		return $arr['serialNumber'];
 	}
+	
+	function is_date_present($serialNo, $date)
+	{
+		$q2 	= "SELECT COUNT(*) as numrows FROM attendanceTime WHERE serialNumber='$serialNo' AND date='$date'";
+		$res 	= mysql_query($q2) or die(mysql_error());
+		$arr 	= mysql_fetch_array($res);
+		return ($arr['numrows'])?TRUE:FALSE;
+	}
+	function getinAMPM($serialNo, $date)
+	{
+		$q2 	= "SELECT inAM, inPM as numrows FROM attendanceTime WHERE serialNumber='$serialNo' AND date='$date'";
+		$res 	= mysql_query($q2) or die(mysql_error());
+		$arr 	= mysql_fetch_array($res);
+		
+		return array('inAM'=>$arr['inAM'],'inPM'=>$arr['inPM']);
+	}
+	
 	$message = "";
 	$i = 0;
 	$tot_rows = 0;
@@ -71,7 +89,11 @@ function getSerialNumber($barcode) {
 						$serialno = getSerialNumber($barcode);
 						$SCID	= getSCID(dbconnect::escape($contents[4]));
 						echo("<br />SCID:".$SCID);
-						$q = "INSERT INTO `attendanceTime`(
+						$date = dbconnect::escape($contents[1]);
+						if(!is_date_present($serialno, $date))
+						{
+						
+							$q = "INSERT INTO `attendanceTime`(
 										serialNumber, 
 										date, 
 										inAM, 
@@ -86,7 +108,21 @@ function getSerialNumber($barcode) {
 										'" . dbconnect::escape($contents[3]) . "',
 										'" . $SCID . "'
 									)";
-
+						}
+						else
+						{
+							$inampm_arr = getinAMPM($serialno, $date);
+							if($inampm_arr['inAM'] != '00:00:00')
+							{
+								$subQ = "inAM ='".$inampm_arr['inAM']."'".
+								($inampm_arr['inPM']!='00:00:00')?', inPM='.$inampm_arr['inPM']:'';
+							}
+							else {
+								$subQ = "inPM ='".$inampm_arr['inPM']."'";
+							}
+							$q = "UPDATE `attendanceTime` 
+								SET $subQ WHERE serialNumber='$serialno' AND date='$date'";
+						}
 						if (mysql_query($q)) {
 							$i++;
 							$timeId = mysql_insert_id();
