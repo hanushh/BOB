@@ -1,7 +1,7 @@
 <?php
-require_once ('../evalbarcode.php');
+require_once ('evalbarcode.php');
 error_reporting(E_ALL ^ E_NOTICE);
-require_once ('../config.php');
+require_once ('config.php');
 ?>
 <html>
 	<head>

@@ -26,29 +26,11 @@ require_once('config.php');
 						<TR><TD align="right" colspan="2">
 
 						<input type="submit" value="Upload" name="submit" ><br /><br /><br /><br /></TD></TR> 
-						
-						<form action="import_process.php" method="POST" enctype="multipart/form-data">
-					<table border="0" width="54%" class="formLabel">
-
-			      <!-- <TR>
-			      <TD colspan="2" class="pageTitle" style="border-bottom:5px solid #E3E3E3;">
-			      </TD>
-			      </TR> -->
-				<TR ID="csvContainer"><TD class='addFieldTitle'>Upload In Process Barcodes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD><TD><input type='file' class='txtbox' name='csvfile'></TD></TR>
-				
-						<TR><TD align="right" colspan="2">
-
-						<input type="submit" value="Upload" name="submit" ><br /><br /><br /><br /></TD></TR>
-						<tr>
-      <td style="vertical-align: top;" id="logout"><a href="logout.php">Logout</a> or return to the Administrator's <a href="admin.php">home page</a>
-      </td>
-    </tr>
-					</table>
 					</form>
 							<form action="attendence_import_process.php" method="POST" enctype="multipart/form-data">
 					<table border="0" width="54%" class="formLabel">
 
-				<TR ID="csvContainer"><TD class='addFieldTitle'>Upload User Profiles:
+				<TR ID="csvContainer"><TD class='addFieldTitle'>Upload User Attendances:
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -60,6 +42,11 @@ require_once('config.php');
 
 						<input type="submit" value="Upload" name="submit" ><br /><br /><br /><br /></TD></TR></table>
 						</form>
+											<tr>
+      <td style="vertical-align: top;" id="logout"><a href="logout.php">Logout</a> or return to the Administrator's <a href="admin.php">home page</a>
+      </td>
+    </tr>
+					</table>
 				<!-- </div>
 			</TD>
 			</TR>

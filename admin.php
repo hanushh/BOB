@@ -37,8 +37,8 @@ Privileges)<br /><br />
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">3. <a href="import.php">Upload</a> file of
-new users (allows input of many users simultaneously rather than one at
+      <td style="vertical-align: top;">3. <a href="import.php">Upload</a> a batch file of
+new users and/or historical attendance data (allows input of many records simultaneously rather than one at
 a time)<br /><br />
       </td>
     </tr>
@@ -77,7 +77,7 @@ a member of the MUM Community who has been Deactivated.<br /><br />
       </td>
     </tr>
 	
- <!--   <tr>
+  <tr>
       <td style="vertical-align: top;">9. <a href="adminformmail.php">E-mail</a>
 the Wakarusa River Company, developer of this attendance system, to
 report an error, request changes, or for other issues<br /><br />

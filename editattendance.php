@@ -48,14 +48,11 @@ elseif(isset($_POST['barcode'])){
 $barcode=$_POST['barcode'];
 }
 else header("location:editpage.php");
-
-$serialNumber = $obj_user->getSerialNumber($barcode);
-
 ?>
 <body>
 <div id="wrapper">
 <?php
-$result = mysql_query("SELECT * FROM attendanceTime WHERE `serialNumber`='$serialNumber'");
+$result = mysql_query("SELECT * FROM attendanceTime WHERE `barcode`='$barcode'");
 $row = mysql_fetch_array($result);
 ?>
 <!--
@@ -68,14 +65,14 @@ $date1=$_GET['date1'];
 $date2=$_GET['date2'];
 	if($date1=="0000-00-00" || $date2=="0000-00-00"){
 		
-		$sql="SELECT * FROM attendanceTime WHERE `serialNumber`='$serialNumber'";
+		$sql="SELECT * FROM attendanceTime WHERE `barcode`='$barcode'";
 	}else{
 		
-		$sql="SELECT * FROM attendanceTime WHERE `serialNumber`='$serialNumber' AND `date` >= '$date1' AND `date` <= '$date2'";
+		$sql="SELECT * FROM attendanceTime WHERE `barcode`='$barcode' AND `date` >= '$date1' AND `date` <= '$date2'";
 	}
 }
 else{
-$sql="SELECT * FROM attendanceTime WHERE `serialNumber`='$serialNumber'";
+$sql="SELECT * FROM attendanceTime WHERE `barcode`='$barcode'";
 
 }
 $res=mysql_query($sql);

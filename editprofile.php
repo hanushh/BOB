@@ -112,7 +112,40 @@ if(!evalbarcode($barcode)) $errorbar=true;
 
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>MyAttendance.us - Friction Free Attendance Tracking</title>
+  <script type="text/javascript">
+function confirm_delete(user,status)
+{
+if(status) stat='deactivate';
+else stat='activate';
+var r=confirm("Are you really want to "+stat+" this user?");
+if (r==true)
+  {
+  var xmlhttp;
+	if (window.XMLHttpRequest){
+	  xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    		{
+				alert(xmlhttp.responseText);
+    			//alert("Sucessfully deleted!");
+				window.location.reload();
+    		}
+	}
+	var url="del_user.php?user="+user+"&stat="+status;
+	xmlhttp.open("GET",url,true);
+	//alert(url);
+	xmlhttp.send();
   
+  }
+
+}
+</script>
 
   
   
@@ -242,11 +275,24 @@ receive e-mail, select 'No'</big>
        <td style="vertical-align: top;"><big>The user is currently <span style="font-weight: bold;"><?php echo $curr_status; ?></span>, check the box to <span style="font-weight: bold;"><?php echo $opp_status; ?></span> the user.</big>
         </td>
 	  </tr>
-	  
+	  <?php
+	  if($row2['mum_stat']){
+	  $val = "checked='checked'";
+	  $val2="onClick='confirm_delete($row[serialNumber],1)'";
+	  $text="Active";
+	  $text2="Deactivate";
+	  }
+	  else{
+	  $val2 = "checked='checked'";
+	  $val= "onClick='confirm_delete($row[serialNumber],0)'";
+	  $text="Activate";
+	  $text2="Inactive";
+	  }
+	  ?>
 	  <tr>
         <td style="vertical-align: top; text-align: center;"> <big><big>
-		<input name="mum_status" <?php if($row2['mum_stat']){ echo 'checked="checked"';} ?> value="Active" type="radio" /> Active</big></big><br />
-        <big><big> <input name="mum_status" <?php if(!$row2['mum_stat']){ echo 'checked="checked"';} ?> value="Inactive" type="radio" />Inactive<br />
+		<input name="mum_status" <?php echo $val;  ?> value="Active" type="radio" /><? echo $text; ?></big></big><br />
+        <big><big> <input name="mum_status" <?php echo $val2; ?> value="Inactive" type="radio" /><? echo $text2; ?><br />
         </big></big> </td>
         <td style="vertical-align: top;"><big>If the user is currently <span style="font-weight: bold;">active</span>, check the box to <span style="font-weight: bold;">deactivate</span> the user. If the user is currently <span style="font-weight: bold;">Inactive</span>, check the box to activate the user. If there is no change required in the user's status, simply leave the box unchecked"</big>
         </td>

@@ -1,1 +1,460 @@
- 
+
+______________
+Thu March 22 2012 10:38:33 AM
+_______________
+
+______________
+Thu March 22 2012 10:35:53 AM
+_______________
+
+______________
+Thu March 22 2012 10:26:57 AM
+_______________
+
+______________
+Thu March 22 2012 05:56:51 AM
+_______________
+
+______________
+Wed March 21 2012 01:30:01 AM
+_______________
+
+______________
+Wed March 21 2012 01:26:19 AM
+_______________
+
+______________
+Tue March 20 2012 02:20:10 PM
+_______________
+
+______________
+Tue March 20 2012 11:50:10 AM
+_______________
+
+______________
+Tue March 20 2012 11:23:22 AM
+_______________
+Error: row 1-The user 1test@test.com already exist
+Error: row 2-The user 2test@test.com already exist
+Error: row 3-The user 3test@test.com already exist
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Sucess: row 8-Sucessfully updated
+Sucess: row 9-Sucessfully updated
+Sucess: row 10-Sucessfully updated
+
+______________
+Tue March 20 2012 11:20:34 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Error: row 4-Required field missing
+Error: row 5-Required field missing
+Error: row 6-Required field missing
+Error: row 7-Required field missing
+Error: row 8-Required field missing
+Error: row 9-Required field missing
+Error: row 10-Required field missing
+
+______________
+Tue March 20 2012 11:10:38 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Error: row 8-Invalid username
+Sucess: row 9-Sucessfully updated
+Sucess: row 10-Sucessfully updated
+Sucess: row 11-Sucessfully updated
+Sucess: row 12-Sucessfully updated
+Sucess: row 13-Sucessfully updated
+Sucess: row 14-Sucessfully updated
+Error: row 15-Invalid username
+
+______________
+Tue March 20 2012 11:08:49 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-Invalid username
+Error: row 3-Invalid username
+Error: row 4-Invalid username
+Error: row 5-Invalid username
+Error: row 6-Invalid username
+Error: row 7-Invalid username
+Error: row 8-Invalid username
+Error: row 9-Invalid username
+Error: row 10-Invalid username
+Error: row 11-Invalid username
+Error: row 12-Invalid username
+Error: row 13-Invalid username
+Error: row 14-Invalid username
+
+______________
+Tue March 20 2012 10:50:54 AM
+_______________
+Error: row 1-The user bleek10856@123.com already exist
+Error: row 2-The user lovetmk2@yahoo.com already exist
+Error: row 3-The user jrcohen45@mum.edu already exist
+Duplicate entry '1900033001100' for key 2Error: row 5-The user invincibility4@globalcountry.net already exist
+Error: row 6-The user jim1@sidhasuccess.com already exist
+Error: row 7-The user cpearsuin@mum.edu already exist
+Error: row 8-The barcode 1900000000000 is already in use
+Error: row 9-The barcode 1900100000000 is already in use
+Error: row 10-The barcode 1900000000000 is already in use
+Duplicate entry '1900100008800' for key 2Error: row 12-The barcode 1900000000000 is already in use
+Error: row 13-The barcode 1900100000000 is already in use
+Error: row 14-The barcode 1900000000000 is already in use
+Error: row 15-Invalid username
+Error: row 16-Invalid barcode
+
+______________
+Tue March 20 2012 10:49:48 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-Invalid username
+Error: row 3-Invalid username
+Error: row 4-Invalid username
+Error: row 5-Invalid username
+Error: row 6-Invalid username
+Error: row 7-Invalid username
+Error: row 8-Invalid username
+Error: row 9-Invalid username
+Error: row 10-Invalid username
+Error: row 11-Invalid username
+Error: row 12-Invalid username
+Error: row 13-Invalid username
+Error: row 14-Invalid username
+Error: row 15-Invalid username
+Error: row 16-Invalid username
+
+______________
+Tue March 20 2012 10:48:13 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-Invalid username
+Error: row 3-Invalid username
+Error: row 4-Invalid username
+Error: row 5-Invalid username
+Error: row 6-Invalid username
+Error: row 7-Invalid username
+Error: row 8-Invalid username
+Error: row 9-Invalid username
+Error: row 10-Invalid username
+
+______________
+Tue March 20 2012 10:47:24 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-Invalid username
+Error: row 3-Invalid username
+Error: row 4-Invalid username
+Error: row 5-Invalid username
+Error: row 6-Invalid username
+Error: row 7-Invalid username
+Error: row 8-Invalid username
+Error: row 9-Invalid username
+Error: row 10-Invalid username
+
+______________
+Tue March 20 2012 10:44:47 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-Invalid username
+Error: row 3-Invalid username
+Error: row 4-Invalid username
+Error: row 5-Invalid username
+Error: row 6-Invalid username
+Error: row 7-Invalid username
+Error: row 8-Invalid username
+Error: row 9-Invalid username
+Error: row 10-Invalid username
+
+______________
+Tue March 20 2012 10:41:11 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-Invalid username
+Error: row 3-Invalid username
+Error: row 4-Invalid username
+Error: row 5-Invalid username
+Error: row 6-Invalid username
+Error: row 7-Invalid username
+Error: row 8-Invalid username
+Error: row 9-Invalid username
+Error: row 10-Invalid username
+
+______________
+Tue March 20 2012 10:39:52 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-Invalid username
+Error: row 3-Invalid username
+Error: row 4-Invalid username
+Error: row 5-Invalid username
+Error: row 6-Invalid username
+Error: row 7-Invalid username
+Error: row 8-Invalid username
+Error: row 9-Invalid username
+Error: row 10-Invalid username
+
+______________
+Tue March 20 2012 10:38:53 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-Invalid username
+Error: row 3-Invalid username
+Error: row 4-Invalid username
+Error: row 5-Invalid username
+Error: row 6-Invalid username
+Error: row 7-Invalid username
+Error: row 8-Invalid username
+Error: row 9-Invalid username
+Error: row 10-Invalid username
+
+______________
+Tue March 20 2012 10:34:13 AM
+_______________
+Sucess: row 1-Sucessfully updated
+Error: row 2-The user lovetmk2@yahoo.com already exist
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Error: row 8-The barcode 1900000000000 is already in use
+Error: row 9-The barcode 1900100000000 is already in use
+Error: row 10-The barcode 1900000000000 is already in use
+Sucess: row 11-Sucessfully updated
+Error: row 12-The barcode 1900000000000 is already in use
+Error: row 13-The barcode 1900100000000 is already in use
+Error: row 14-The barcode 1900000000000 is already in use
+Error: row 15-Invalid username
+Error: row 16-Invalid barcode
+
+______________
+Tue March 20 2012 10:30:10 AM
+_______________
+Error: row 1-Required field missing
+Error: row 2-Required field missing
+Error: row 3-Required field missing
+Error: row 4-Required field missing
+Error: row 5-Required field missing
+Error: row 6-Required field missing
+Error: row 7-Required field missing
+Error: row 8-Required field missing
+Error: row 9-Required field missing
+Error: row 10-Required field missing
+
+______________
+Tue March 20 2012 01:42:14 AM
+_______________
+Error: row 1-The user bleek1085@123.com already exist
+Sucess: row 2-Sucessfully updated
+Error: row 3-The barcode 1900100000000 is already in use
+Error: row 4-Invalid username
+Error: row 5-The barcode 1900100000000 is already in use
+Error: row 6-The barcode 1900000000000 is already in use
+Error: row 7-The barcode 1900100000000 is already in use
+Error: row 8-The barcode 1900000000000 is already in use
+Error: row 9-The barcode 1900100000000 is already in use
+Error: row 10-The barcode 1900000000000 is already in use
+Error: row 11-The barcode 1900100000000 is already in use
+Error: row 12-The barcode 1900000000000 is already in use
+Error: row 13-The barcode 1900100000000 is already in use
+Error: row 14-The barcode 1900000000000 is already in use
+
+______________
+Tue March 20 2012 01:37:53 AM
+_______________
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') 
+								VALUES (
+								'1900100880000', 
+								'202cb962ac59075b964b07152' at line 10You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') 
+								VALUES (
+								'1900000000900', 
+								'202cb962ac59075b964b07152' at line 10Error: row 3-The barcode 1900100000000 is already in use
+Error: row 4-Invalid username
+Error: row 5-The barcode 1900100000000 is already in use
+Error: row 6-The barcode 1900000000000 is already in use
+Error: row 7-The barcode 1900100000000 is already in use
+Error: row 8-The barcode 1900000000000 is already in use
+Error: row 9-The barcode 1900100000000 is already in use
+Error: row 10-The barcode 1900000000000 is already in use
+Error: row 11-The barcode 1900100000000 is already in use
+Error: row 12-The barcode 1900000000000 is already in use
+Error: row 13-The barcode 1900100000000 is already in use
+Error: row 14-The barcode 1900000000000 is already in use
+
+______________
+Tue March 20 2012 01:29:08 AM
+_______________
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') 
+								VALUES (
+								'1900100880000', 
+								'202cb962ac59075b964b07152' at line 10Error: row 2-The barcode 1900000000000 is already in use
+Error: row 3-The barcode 1900100000000 is already in use
+Error: row 4-Invalid username
+Error: row 5-The barcode 1900100000000 is already in use
+Error: row 6-The barcode 1900000000000 is already in use
+Error: row 7-The barcode 1900100000000 is already in use
+Error: row 8-The barcode 1900000000000 is already in use
+Error: row 9-The barcode 1900100000000 is already in use
+Error: row 10-The barcode 1900000000000 is already in use
+Error: row 11-The barcode 1900100000000 is already in use
+Error: row 12-The barcode 1900000000000 is already in use
+Error: row 13-The barcode 1900100000000 is already in use
+Error: row 14-The barcode 1900000000000 is already in use
+
+______________
+Tue March 20 2012 01:27:12 AM
+_______________
+Error: row 1-The barcode 1900100000000 is already in use
+Error: row 2-The barcode 1900000000000 is already in use
+Error: row 3-The barcode 1900100000000 is already in use
+Sucess: row 4-Sucessfully updated
+Error: row 5-The barcode 1900100000000 is already in use
+Error: row 6-The barcode 1900000000000 is already in use
+Error: row 7-The barcode 1900100000000 is already in use
+Error: row 8-The barcode 1900000000000 is already in use
+Error: row 9-The barcode 1900100000000 is already in use
+Error: row 10-The barcode 1900000000000 is already in use
+Error: row 11-The barcode 1900100000000 is already in use
+Error: row 12-The barcode 1900000000000 is already in use
+Error: row 13-The barcode 1900100000000 is already in use
+Error: row 14-The barcode 1900000000000 is already in use
+
+______________
+Tue March 20 2012 12:17:44 AM
+_______________
+Duplicate entry '1900100040203' for key 2Duplicate entry '1900000000001' for key 2Duplicate entry '1900100300002' for key 2Duplicate entry '1900000000003' for key 2Duplicate entry '1900100000004' for key 2Duplicate entry '1900000000005' for key 2Duplicate entry '1900100000006' for key 2Duplicate entry '1900000000007' for key 2Duplicate entry '1900100000007' for key 2Duplicate entry '1900000000008' for key 2Duplicate entry '1900100000009' for key 2Duplicate entry '1900000001010' for key 2Duplicate entry '1900100000110' for key 2Duplicate entry '1900012000000' for key 2
+______________
+Tue March 20 2012 12:14:17 AM
+_______________
+Duplicate entry '1900100040203' for key 2Sucess: row 2-Sucessfully updated
+Duplicate entry '1900100300002' for key 2Sucess: row 4-Sucessfully updated
+Duplicate entry '1900100000004' for key 2Sucess: row 6-Sucessfully updated
+Duplicate entry '1900100000006' for key 2Sucess: row 8-Sucessfully updated
+Duplicate entry '1900100000007' for key 2Sucess: row 10-Sucessfully updated
+Duplicate entry '1900100000009' for key 2Sucess: row 12-Sucessfully updated
+Sucess: row 13-Sucessfully updated
+Sucess: row 14-Sucessfully updated
+
+______________
+Mon March 19 2012 05:07:53 PM
+_______________
+Error: row 1-Required field missing
+Error: row 2-Required field missing
+Error: row 3-Required field missing
+Error: row 4-Required field missing
+Error: row 5-Required field missing
+Error: row 6-Required field missing
+Error: row 7-Required field missing
+Error: row 8-Required field missing
+Error: row 9-Required field missing
+Error: row 10-Required field missing
+
+______________
+Mon March 19 2012 10:40:26 AM
+_______________
+Error: row 1-Invalid barcode
+Error: row 2-Invalid barcode
+Error: row 3-Invalid barcode
+Error: row 4-Invalid barcode
+Error: row 5-Invalid barcode
+Error: row 6-Invalid barcode
+Error: row 7-Invalid barcode
+Error: row 8-Invalid barcode
+Error: row 9-Invalid barcode
+Error: row 10-Invalid barcode
+Error: row 11-Invalid barcode
+Error: row 12-Invalid barcode
+Error: row 13-Invalid barcode
+Error: row 14-Invalid barcode
+
+______________
+Mon March 19 2012 10:38:37 AM
+_______________
+Error: row 1-Required field missing
+Error: row 2-Required field missing
+Error: row 3-Required field missing
+Error: row 4-Required field missing
+Error: row 5-Required field missing
+Error: row 6-Required field missing
+Error: row 7-Required field missing
+Error: row 8-Required field missing
+Error: row 9-Required field missing
+Error: row 10-Required field missing
+
+______________
+Wed March 14 2012 03:56:50 PM
+_______________
+
+______________
+Thu March 08 2012 02:00:10 AM
+_______________
+
+______________
+Thu March 08 2012 01:14:19 AM
+_______________
+Error: row 1-Invalid username
+Sucess: row 2-Sucessfully updated
+Sucess: row 3-Sucessfully updated
+Sucess: row 4-Sucessfully updated
+Sucess: row 5-Sucessfully updated
+Sucess: row 6-Sucessfully updated
+Sucess: row 7-Sucessfully updated
+Sucess: row 8-Sucessfully updated
+
+______________
+Thu March 08 2012 01:10:08 AM
+_______________
+Error: row 1-Invalid username
+Duplicate entry '' for key 3Duplicate entry '' for key 3Duplicate entry '' for key 3Duplicate entry '' for key 3Duplicate entry '' for key 3Duplicate entry '' for key 3Duplicate entry '' for key 3
+______________
+Thu March 08 2012 01:09:37 AM
+_______________
+Error: row 1-Invalid username
+Error: row 2-Invalid username
+Error: row 3-Invalid username
+Error: row 4-Invalid username
+Error: row 5-Invalid username
+Error: row 6-Invalid username
+Error: row 7-Invalid username
+Error: row 8-Invalid username
+
+______________
+Thu March 08 2012 01:04:49 AM
+_______________
+Duplicate entry '1900100067800' for key 2Duplicate entry '1900100067818' for key 2Duplicate entry '1900100067842' for key 2Duplicate entry '1900100067859' for key 2Duplicate entry '1900100067834' for key 2Duplicate entry '1900100067867' for key 2Sucess: row 7-Sucessfully updated
+Duplicate entry '1900100067875' for key 2
+______________
+Thu March 08 2012 12:58:14 AM
+_______________
+
+______________
+Thu March 08 2012 12:55:47 AM
+_______________
+
+______________
+Thu March 08 2012 12:52:56 AM
+_______________
+
+______________
+Thu March 08 2012 12:52:29 AM
+_______________
+
+______________
+Thu March 08 2012 12:45:53 AM
+_______________
+
+______________
+Wed March 07 2012 02:25:08 AM
+_______________
+ 4 of 4 rows inserted.4 of 4 rows inserted.4 of 4 rows inserted.4 of 4 rows inserted.7 of 8 rows inserted.7 of 8 rows inserted.6 of 7 rows inserted.6 of 7 rows inserted.

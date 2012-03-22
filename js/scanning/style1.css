@@ -1,0 +1,39 @@
+
+#ScannedText {
+	font-family: "MS Serif", "New York", serif;
+	font-weight: bold;
+}
+#ScannedText .name{
+	text-transform: uppercase;
+}
+#ScannedText ul li{
+	list-style-type: none;	
+	text-align:right;
+}
+#ScannedText li:nth-child(odd) .name{
+	color: red;
+}
+#ScannedText li:nth-child(even) .name {
+    color:green;
+}
+#ScannedText li:nth-child(1){
+	font-size:34px;
+}
+#ScannedText li:nth-child(2){
+	font-size:25px;
+}
+#ScannedText li:nth-child(3){
+	font-size:18px;
+}
+#ScannedText li:nth-child(4){
+	font-size:13px;
+}
+#ScannedText li:nth-child(5){
+	font-size:9px;
+}
+p.greeting{
+color:#426CC6;
+}
+.white{
+color:white;
+}

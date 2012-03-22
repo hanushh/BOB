@@ -82,7 +82,6 @@ fwrite($file,"\n_______________\n");
 
 						$barcode	=	dbconnect::escape($contents[0]);
 						$pass1		=	md5(dbconnect::escape($contents[1]));
-						$pass1		=	($pass1 == NULL || $pass1 == '' )?'123':$pass1;
 						$email		=	dbconnect::escape($contents[2]);
 						require_once('evalbarcode.php');
 						/////////test///////////
@@ -101,9 +100,9 @@ fwrite($file,"\n_______________\n");
 						///////////////end///////////		
 				
 						$error_missing=false;
-						for($j=0;$j<9;$j++)
+						for($j=0;$j<7;$j++)
 						{ 
-							if($j==8) continue;
+							//if($j==8) continue;
 								if(!$contents["$j"])
 								{
 									$error_missing=true;
@@ -218,7 +217,7 @@ fwrite($file,"\n_______________\n");
 								lastName, 
 								gender, 
 								subscribe, 
-								role, 
+								role 
 								) 
 								VALUES (
 								'".dbconnect::escape($contents[0])."', 
@@ -230,6 +229,7 @@ fwrite($file,"\n_______________\n");
 								'".dbconnect::escape($contents[6])."',
 								'".dbconnect::escape($contents[7])."')";
 								
+								
 								if(mysql_query($q))
 								{
 									$serial_number = mysql_insert_id();
@@ -238,7 +238,7 @@ fwrite($file,"\n_______________\n");
 									{
 									
 										$q2  =	"INSERT INTO `userCommunity` (serialNumber,mum_stat,mumCommunity) 
-										VALUES ('".$serial_number."','1','1')";
+						VALUES ('".$serial_number."','1','1')";
 										if(!mysql_query($q2))
 										{
 											$message = mysql_error();
@@ -261,6 +261,7 @@ fwrite($file,"\n_______________\n");
 				}
 	
 			}
+
 
 		}
 		else
