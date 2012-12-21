@@ -1,4 +1,4 @@
-<?php 
+<?php  
 require_once('config.php'); 
 require_once("logcheckadmin.php");
 $_SESSION['LAST_ACTIVITY'] = time();
